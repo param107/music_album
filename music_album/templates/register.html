@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="jumbotron">
+         <h1> Songs for you !</h1>
+    </div>
+{% block login %}
+
+<h2>Register</h2>
+<form action= "/accounts/register/" method='post'> {% csrf_token %}
+{{form}}
+<input type='submit' value='Register'/>
+</form>
+{% endblock %}
+{% endblock %}

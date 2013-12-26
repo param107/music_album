@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="jumbotron">
+         <h1> Songs for you !</h1>
+    </div>
+     <table border="0">
+<tr>
+    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;Songs</h3>
+ <div>
+ <ul>
+{% for p in tracks %}
+<li><a href="/index/all_tracks/{{ p.link }}" >{{p.name}}</a></li>
+{% endfor %}
+ </ul>
+ </div></td>
+</tr>
+</table>
+{% endblock %}

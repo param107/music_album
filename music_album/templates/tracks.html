@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="jumbotron">
+         <h1> Songs for you !</h1>
+    </div>
+<div>
+
+<h3>{{track.name}}</h3>
+<h5>About:</h5>
+<p>{{track.about}}</p>
+<h5>Artists</h5>
+{% for c in art %}
+    <p>{{art.artist}}</p>
+{% endfor %}
+</div>
+    <form method="post" action="." >
+    {{ form.as_p }}
+    <br />
+    <input type = "submit" value = 'add to playlist' name ='submit'/>{% csrf_token %}
+    </form>
+
+{%endblock%}
+{% block mid_site %}
+
+
+
+{% endblock %}

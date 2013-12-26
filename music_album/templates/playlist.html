@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="jumbotron">
+         <h1> Songs for you !</h1>
+    </div>
+     <table border="0">
+<tr>
+    <td><h3>&nbsp;&nbsp;&nbsp;&nbsp;MY Playlist</h3>
+ <p>{{ playlist_no }}</p>
+     {% for p in playlist %}
+     <p>{{ p.name }}</p
+         {% endfor %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="jumbotron">
+         <h1> Songs for you !</h1>
+    </div>
+{% block login %}
+
+{% if form.errors %}
+<p>The username and Password doesnt match</p>
+{% endif %}
+<p><a href="/accounts/register">Sign Up</a> </p>
+
+<form action="/accounts/auth/" method='post'>{% csrf_token %}
+<label for= "username">Username:</label>
+<input type='text' name='username' value="" id = 'username'>
+<label for= "password">Password:</label>
+<input type='password' name='password' value="" id = 'password'>
+<input type = "submit" value= 'login'/>
+</form>
+{% endblock %}
+{% endblock %}
