@@ -1,6 +1,7 @@
 from django.contrib import admin
 from models import Album, Artist, Track
 
+#admin.py
 class Album_form(admin.ModelAdmin):
     list_display = ('name', 'genre', 'relyr', 'is_famous')
     list_filter = ['relyr']
